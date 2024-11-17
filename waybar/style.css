@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0px;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
     font-size: 13px;
     min-height: 0;
 }
@@ -19,29 +19,34 @@ window#waybar.hidden {
 }
 
 
-#workspaces button {
-    background: #1f1f1f;
+#workspaces {
+    background: #2b2a33;
     color: #fbfbfe;
+    margin-left: 15px;
     border-radius: 20px;
+} 
 
+#workspaces button {
+    background: #2b2a33;
+    color: #fbfbfe;
+    padding: 5px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
-    background: lightblue;
+    background: #2b2a33;
     color: #fbfbfe;
-    border-bottom: 3px solid #fbfbfe;
 
 }
 
 #workspaces button.focused {
-    background: #1f1f1f;
+    background: #2b2a33;
+    color: #25d0b4;
 }
 
 #workspaces button.focused:hover {
-    background: lightblue;
+    background-color: #2b2a33;
     color: #fbfbfe;
-    border-bottom: 3px solid #fbfbfe;
 
 }
 
@@ -135,6 +140,7 @@ label:focus {
 #cpu {
     background-color: #2b2a33;
     color: #fbfbfe;
+    border-radius: 0px 0px 0px 0px
 }
 
 #memory {
@@ -166,6 +172,7 @@ label:focus {
 #pulseaudio {
     background-color: #2b2a33;
     color: #fbfbfe;
+    border-radius: 20px 0px 0px 20px
 }
 
 #pulseaudio.muted {
@@ -207,7 +214,7 @@ label:focus {
     background-color: #2b2a33;
     font-size: 25px;
     border-radius: 20px;
-    margin-right: 2px;
+    margin-right: 10px;
 }
 
 #custom-updater {
@@ -260,19 +267,6 @@ label:focus {
     -gtk-icon-effect: highlight;
     background-color: #2b2a33;
     color: #fbfbfe;
-}
-
-#idle_inhibitor {
-    background-color: #2b2a33;
-    border-radius: 20px 0px 0px 20px;
-
-}
-
-#idle_inhibitor.activated {
-    background-color: #2b2a33;
-    color: #fbfbfe;
-    border-radius: 20px 0px 0px 20px;
-
 }
 
 #language {
