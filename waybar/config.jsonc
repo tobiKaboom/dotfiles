@@ -11,15 +11,12 @@
     // Choose the order of the modules
 
     "modules-left":[ "pulseaudio", "hyprland/workspaces", "cpu", "memory"],
-    "modules-center": [ "custom/launcher", "custom/media","wlr/taskbar"],
+    "modules-center": [ "custom/launcher", "wlr/taskbar"],
     "modules-right":["custom/layout", "custom/updater", "custom/snip", "backlight", "keyboard-state",  "battery", "battery#bat2", "network", "clock", "custom/power"],
     // Modules configuration
 
     "hyprland/workspaces": {
 	"format": "●",
-	"format-focused": "●",
-	"format-hover": "●",
-        "acrive-only": true,
     	"move-to-monitor": true,
     	"all-outputs": false,
 	"format-window-separator": "<null>"
@@ -92,7 +89,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{signalStrength}% network",
         "format-ethernet": "Connected  ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -102,7 +99,7 @@
 
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
+        "format": "{volume}% vol",
         "format-bluetooth": "{volume}% {icon}",
         "format-bluetooth-muted": "{icon} {format_source}",
         "format-muted": "{format_source}",
@@ -137,7 +134,7 @@
         "on-click-right": "killall wofi"
     },
     "custom/power":{
-	"format": "•",
+	"format": "-",
 	"on-click": "shutdown -h now",
 	"on-click-right": "sbutdown -r now"
     }

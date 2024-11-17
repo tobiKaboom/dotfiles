@@ -2,14 +2,15 @@
     border: none;
     border-radius: 0px;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: sans-serif;
-    font-size: 13px;
+    font-family: Inconsolata, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
     min-height: 0;
 }
 
 window#waybar {
     background-color: transparent;
-    color: #fbfbfe;
+    color: #95D5B2;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -18,25 +19,31 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-
 #workspaces {
     background: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     margin-left: 15px;
     border-radius: 20px;
 } 
 
+#workspaces :active {
+    color: #25d0b4;
+}
+
 #workspaces button {
     background: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     padding: 5px;
+    font-weight: normal;
+}
+
+#workspaces button.active {
+    color: #40916C;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
     background: #2b2a33;
-    color: #fbfbfe;
-
 }
 
 #workspaces button.focused {
@@ -46,7 +53,7 @@ window#waybar.hidden {
 
 #workspaces button.focused:hover {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
 
 }
 
@@ -56,7 +63,7 @@ window#waybar.hidden {
 
 #mode {
     background-color: #64727D;
-    border-bottom: 3px solid #fbfbfe;
+    border-bottom: 3px solid #95D5B2;
 }
 
 #clock,
@@ -80,7 +87,7 @@ window#waybar.hidden {
 #idle_inhibitor,
 #mpd {
     padding: 0 10px;
-    color: #fbfbfe;
+    color: #95D5B2;
 }
 
 #window,
@@ -100,7 +107,7 @@ window#waybar.hidden {
 
 #clock {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     border-radius: 0px 20px 20px 0px;
     margin-right: 4px;
 
@@ -108,24 +115,24 @@ window#waybar.hidden {
 
 #battery {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
 }
 
 #battery.charging, #battery.plugged {
-    color: #fbfbfe;
+    color: #95D5B2;
     background-color: #2b2a33;
 }
 
 @keyframes blink {
     to {
         background-color: #2b2a33;
-        color: #fbfbfe;
+        color: #95D5B2;
     }
 }
 
 #battery.critical:not(.charging) {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -139,18 +146,18 @@ label:focus {
 
 #cpu {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     border-radius: 0px 0px 0px 0px
 }
 
 #memory {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     border-radius: 0px 20px 20px 0px
 }
 #disk {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
 }
 
 #backlight {
@@ -159,7 +166,7 @@ label:focus {
 
 #network {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     border-radius: 20px 0px 0px 20px
 
 }
@@ -171,7 +178,7 @@ label:focus {
 
 #pulseaudio {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     border-radius: 20px 0px 0px 20px
 }
 
@@ -182,7 +189,7 @@ label:focus {
 
 #custom-media {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     border-radius: 20px;
     margin-right: 5px;
     margin-left: 5px;
@@ -190,7 +197,7 @@ label:focus {
 
 #custom-media.custom-spotify {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     border-radius: 20px;
     margin-right: 5px;
 
@@ -198,7 +205,7 @@ label:focus {
 
 #custom-media.custom-vlc {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     border-radius: 20px;
     margin-right: 5px;
 }
@@ -219,18 +226,18 @@ label:focus {
 
 #custom-updater {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
 }
 
 #custom-snip {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     font-size: 20px;
 }
 
 #custom-layout{
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     font-size: 18px;
     border-radius: 20px 0px 0px 20px;
 }
@@ -238,13 +245,15 @@ label:focus {
 #taskbar {
     background-color: #2b2a33;
     border-radius: 20px;
-
 }
 
+#taskbar :hover {
+    background-color: #2b2a33;
+}
 
 #temperature {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     border-radius: 0px 20px 20px 0px;
 }
 
@@ -254,24 +263,24 @@ label:focus {
 
 #tray {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
 }
 
 #tray > .passive {
     -gtk-icon-effect: dim;
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
 }
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
 }
 
 #language {
     background-color: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     min-width: 16px;
     padding-left : 8px;
     border-radius: 20px 0px 0px 20px;
@@ -279,7 +288,7 @@ label:focus {
 
 #keyboard-state {
     background: #2b2a33;
-    color: #fbfbfe;
+    color: #95D5B2;
     min-width: 16px;
 }
 
