@@ -85,9 +85,25 @@ window#waybar.hidden {
 #tray,
 #mode,
 #idle_inhibitor,
-#mpd
+#mpd {
+    padding: 0 10px;
+    color: #95D5B2;
+}
+
 #window,
-#workspaces
+#workspaces {
+    margin: 0px 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0px;
+}
 
 #clock {
     background-color: #2b2a33;
@@ -95,6 +111,33 @@ window#waybar.hidden {
     border-radius: 0px 20px 20px 0px;
     margin-right: 4px;
 
+}
+
+#battery {
+    background-color: #2b2a33;
+    color: #95D5B2;
+}
+
+#battery.charging, #battery.plugged {
+    color: #95D5B2;
+    background-color: #2b2a33;
+}
+
+@keyframes blink {
+    to {
+        background-color: #2b2a33;
+        color: #95D5B2;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #2b2a33;
+    color: #95D5B2;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 label:focus {
@@ -111,6 +154,14 @@ label:focus {
     background-color: #2b2a33;
     color: #95D5B2;
     border-radius: 0px 20px 20px 0px
+}
+#disk {
+    background-color: #2b2a33;
+    color: #95D5B2;
+}
+
+#backlight {
+    background-color: #2b2a33;
 }
 
 #network {
@@ -136,6 +187,29 @@ label:focus {
     color: red;
 }
 
+#custom-media {
+    background-color: #2b2a33;
+    color: #95D5B2;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#custom-media.custom-spotify {
+    background-color: #2b2a33;
+    color: #95D5B2;
+    border-radius: 20px;
+    margin-right: 5px;
+
+}
+
+#custom-media.custom-vlc {
+    background-color: #2b2a33;
+    color: #95D5B2;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
 #custom-power{
     background-color: #2b2a33;
     font-size: 18px;
@@ -148,6 +222,24 @@ label:focus {
     font-size: 25px;
     border-radius: 20px;
     margin-right: 10px;
+}
+
+#custom-updater {
+    background-color: #2b2a33;
+    color: #95D5B2;
+}
+
+#custom-snip {
+    background-color: #2b2a33;
+    color: #95D5B2;
+    font-size: 20px;
+}
+
+#custom-layout{
+    background-color: #2b2a33;
+    color: #95D5B2;
+    font-size: 18px;
+    border-radius: 20px 0px 0px 20px;
 }
 
 #taskbar {
@@ -184,4 +276,26 @@ label:focus {
     -gtk-icon-effect: highlight;
     background-color: #2b2a33;
     color: #95D5B2;
+}
+
+#language {
+    background-color: #2b2a33;
+    color: #95D5B2;
+    min-width: 16px;
+    padding-left : 8px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+#keyboard-state {
+    background: #2b2a33;
+    color: #95D5B2;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0px 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
 }
