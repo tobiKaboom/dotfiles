@@ -2,7 +2,7 @@ my epic dotfiles
 ## aqua-green
 ![homescreen](https://raw.githubusercontent.com/tobiKaboom/dotfiles/refs/heads/main/screenies/homesccreen2.png)
 
-## average amateur musician color scheme
+## average-amateur-musician-color-scheme
 ![homescreen](https://raw.githubusercontent.com/tobiKaboom/dotfiles/refs/heads/main/screenies/homescreen.png)
 
 notice:
