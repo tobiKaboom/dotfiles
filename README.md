@@ -3,7 +3,7 @@ my epic dotfiles
 ![homescreen](https://raw.githubusercontent.com/tobiKaboom/dotfiles/refs/heads/main/screenies/homesccreen2.png)
 packages: hyprland, waybar, wofi
 
-## average-amateur-musician-color-scheme
+## pink-blue
 ![homescreen](https://raw.githubusercontent.com/tobiKaboom/dotfiles/refs/heads/main/screenies/homescreen.png)
 packages: hyprland, waybar, wofi
 
