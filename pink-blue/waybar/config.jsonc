@@ -78,6 +78,6 @@
     "custom/power":{
 	"format": "-",
 	"on-click": "shutdown -h now",
-	"on-click-right": "sbutdown -r now"
+	"on-click-right": "systemctl suspend"
     }
 }
